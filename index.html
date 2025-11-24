@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Joiner - Объединение аудиофайлов</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="brand-icon">♪</span>
+                <span>Audio Joiner</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Возможности</a></li>
+                <li><a href="#how-to">Как использовать</a></li>
+                <li><a href="#app">Приложение</a></li>
+                <li><a href="#looping">Повтор</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Объединяйте аудиофайлы легко и быстро</h1>
+                <p>Профессиональное объединение MP3, WAV и других форматов без потери качества</p>
+                <button class="btn btn-primary" onclick="document.getElementById('app').scrollIntoView({behavior: 'smooth'})">
+                    Начать прямо сейчас →
+                </button>
+            </div>
+            <div class="hero-image">
+                <div class="waveform">
+                    <div class="wave" style="height: 40%;"></div>
+                    <div class="wave" style="height: 70%;"></div>
+                    <div class="wave" style="height: 50%;"></div>
+                    <div class="wave" style="height: 80%;"></div>
+                    <div class="wave" style="height: 60%;"></div>
+                    <div class="wave" style="height: 75%;"></div>
+                    <div class="wave" style="height: 45%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Наши возможности</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Супер быстро</h3>
+                    <p>Объединяйте файлы за считанные секунды. Все обрабатывается прямо в вашем браузере.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Безопасно</h3>
+                    <p>Ваши файлы обрабатываются локально. Мы не загружаем ничего на серверы.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">∞</div>
+                    <h3>Без ограничений</h3>
+                    <p>Объединяйте столько файлов, сколько нужно. Нет лимитов на размер или количество.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Гибкие настройки</h3>
+                    <p>Регулируйте громкость, выбирайте порядок файлов и формат вывода.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Мобильная версия</h3>
+                    <p>Работает на любых устройствах - компьютерах, планшетах и смартфонах.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎵</div>
+                    <h3>Все форматы</h3>
+                    <p>Поддерживает MP3, WAV, OGG, FLAC и другие популярные форматы.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Повтор песни</h3>
+                    <p>Повторяйте одну песню на 1 час, 10 часов или 100 часов!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How To Section -->
+    <section id="how-to" class="how-to">
+        <div class="container">
+            <h2>Как это работает</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Загрузите файлы</h3>
+                    <p>Выберите аудиофайлы, которые хотите объединить</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Настройте порядок</h3>
+                    <p>Расположите файлы в нужном порядке, отрегулируйте громкость</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Объедините</h3>
+                    <p>Нажмите кнопку и дождитесь обработки</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Скачайте</h3>
+                    <p>Загрузите готовый файл на ваше устройство</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Section -->
+    <section id="app" class="app-section">
+        <div class="container">
+            <div class="app-card">
+                <h2>Начните прямо сейчас</h2>
+                
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📤</div>
+                    <h3>Перетащите аудиофайлы сюда</h3>
+                    <p>или</p>
+                    <button class="btn btn-secondary" onclick="document.getElementById('fileInput').click()">
+                        Выберите файлы
+                    </button>
+                    <input type="file" id="fileInput" multiple accept="audio/*" style="display: none;">
+                </div>
+
+                <div id="fileList" class="file-list" style="display: none;">
+                    <h3>Загруженные файлы</h3>
+                    <ul id="files"></ul>
+                    <div class="file-list-actions">
+                        <button class="btn btn-primary" onclick="joinAudio()">Объединить аудио</button>
+                        <button class="btn btn-secondary" onclick="resetFiles()">Сбросить</button>
+                    </div>
+                </div>
+
+                <div id="progress" class="progress" style="display: none;">
+                    <p>Идет обработка...</p>
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+                </div>
+
+                <div id="result" class="result" style="display: none;">
+                    <div class="success-icon">✓</div>
+                    <h3>Готово!</h3>
+                    <p>Ваше аудио успешно объединено</p>
+                    <button class="btn btn-primary" onclick="downloadAudio()">
+                        ⬇ Скачать MP3
+                    </button>
+                    <button class="btn btn-secondary" onclick="resetFiles()">Объединить еще</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Looping Section -->
+    <section id="looping" class="looping-section">
+        <div class="container">
+            <div class="looping-card">
+                <h2>🔁 Повтор песни</h2>
+                <p class="section-subtitle">Повторяйте одну песню на нужное вам время</p>
+                
+                <div class="upload-area" id="loopUploadArea">
+                    <div class="upload-icon">🎵</div>
+                    <h3>Загрузите одну песню</h3>
+                    <p>или</p>
+                    <button class="btn btn-secondary" onclick="document.getElementById('loopFileInput').click()">
+                        Выберите файл
+                    </button>
+                    <input type="file" id="loopFileInput" accept="audio/*" style="display: none;">
+                </div>
+
+                <div id="loopFileInfo" class="file-info" style="display: none;">
+                    <div class="current-file">
+                        <h3>📁 Загруженный файл</h3>
+                        <div class="file-item">
+                            <div>
+                                <div class="file-name" id="loopFileName"></div>
+                                <div class="file-size" id="loopFileSize"></div>
+                                <div class="file-duration" id="loopFileDuration"></div>
+                            </div>
+                            <button onclick="resetLooping()" style="background: none; border: none; color: #ef4444; cursor: pointer; font-size: 1.2rem;">
+                                🗑️
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="loop-options">
+                        <h3>⏱️ Выберите время повтора</h3>
+                        <div class="loop-buttons">
+                            <button class="btn btn-loop" onclick="loopAudio(1)">
+                                1 час
+                            </button>
+                            <button class="btn btn-loop" onclick="loopAudio(10)">
+                                10 часов
+                            </button>
+                            <button class="btn btn-loop" onclick="loopAudio(100)">
+                                100 часов
+                            </button>
+                        </div>
+                        <div class="custom-loop">
+                            <label for="customHours">✏️ Или укажите свое время (часы):</label>
+                            <div style="display: flex; gap: 10px;">
+                                <input type="number" id="customHours" min="1" max="1000" placeholder="Введите часы" style="flex: 1; padding: 10px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem;">
+                                <button class="btn btn-primary" onclick="loopAudioCustom()">Применить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="loopProgress" class="progress" style="display: none;">
+                    <p id="loopProgressText">Идет обработка...</p>
+                    <div class="progress-bar">
+                        <div id="loopProgressFill" class="progress-fill"></div>
+                    </div>
+                </div>
+
+                <div id="loopResult" class="result" style="display: none;">
+                    <div class="success-icon">✓</div>
+                    <h3>Готово!</h3>
+                    <p id="loopResultText">Ваша песня успешно повторена</p>
+                    <button class="btn btn-primary" onclick="downloadLoopedAudio()">
+                        ⬇ Скачать MP3
+                    </button>
+                    <button class="btn btn-secondary" onclick="resetLooping()">Повторить еще</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>❓ Часто задаваемые вопросы</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Какие форматы поддерживаются?</h3>
+                    <p>Поддерживаются MP3, WAV, OGG, FLAC, M4A и другие популярные аудиоформаты.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Безопасна ли загрузка?</h3>
+                    <p>Да! Все файлы обрабатываются локально в вашем браузере. Ничего не отправляется на серверы.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Есть ли ограничения на размер?</h3>
+                    <p>Ограничения зависят от памяти вашего устройства. Обычно можно объединить до 500 MB.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Сколько это стоит?</h3>
+                    <p>Audio Joiner полностью бесплатен! Нет никаких скрытых платежей.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Потеряется ли качество звука?</h3>
+                    <p>Файлы скачиваются в формате MP3 высокого качества (192 kbps). Это оптимальный баланс между качеством и размером файла.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Поддерживается мобильные устройства?</h3>
+                    <p>Да, сайт полностью адаптирован для смартфонов и планшетов.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Как работает функция повтора?</h3>
+                    <p>Загрузите одну песню и выберите время повтора (1, 10, 100 часов или свое значение). Песня будет повторена нужное количество раз.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>В каком формате скачиваются файлы?</h3>
+                    <p>Все файлы скачиваются в формате MP3, который совместим со всеми устройствами и плеерами.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Audio Joiner. Все права защищены. | Сделано с ❤️</p>
+            <div class="footer-links">
+                <a href="#" title="GitHub">🐙</a>
+                <a href="#" title="Twitter">𝕏</a>
+                <a href="#" title="Facebook">f</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MP3 Encoder Library -->
+    <script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.1/lame.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
